@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://blprxkn413cjn"]
+
+[ext_resource type="Script" uid="uid://dxrsoyo235rxn" path="res://src/ui/rich_label_3d.gd" id="1_cav3w"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_cav3w"]
+viewport_path = NodePath("SubViewport")
+
+[node name="RichLabel3d" type="Sprite3D"]
+pixel_size = 0.005
+billboard = 1
+no_depth_test = true
+render_priority = 1
+texture = SubResource("ViewportTexture_cav3w")
+script = ExtResource("1_cav3w")
+label_width = 500
+label_height = 100
+font_size = 64
+outline_size = 32
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+canvas_item_default_texture_filter = 0
+size = Vector2i(500, 100)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+vertical_alignment = 1

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://bk6rmpauy42sq"]
+
+[ext_resource type="Script" uid="uid://bhtuqtm6u8b5i" path="res://resources/fish/fish_data.gd" id="1_fv4fd"]
+[ext_resource type="Resource" uid="uid://b2400qongqw6u" path="res://resources/inventory/tuna_item.tres" id="1_ialol"]
+
+[resource]
+script = ExtResource("1_fv4fd")
+mesh_file_path = "res://assets/3D_models/fish/Tuna.glb"
+mesh_scale = 0.5
+length = 1.5
+radius = 0.3
+speed = 2.0
+stops_per_swim_zone = 1
+lure_probability = 0.005
+qte_lenght = 2.0
+qte_max_distance = 5.0
+word_lengths = Array[int]([6, 5, 5])
+struggle_time = 1.0
+escape_time = 2.0
+inventory_info = ExtResource("1_ialol")
+metadata/_custom_type_script = "uid://bhtuqtm6u8b5i"

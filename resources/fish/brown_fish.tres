@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://boygk1ta2m3cq"]
+
+[ext_resource type="Resource" uid="uid://bwfv6xteployc" path="res://resources/inventory/brown_fish_item.tres" id="1_jlqfx"]
+[ext_resource type="Script" uid="uid://bhtuqtm6u8b5i" path="res://resources/fish/fish_data.gd" id="1_ocqiq"]
+
+[resource]
+script = ExtResource("1_ocqiq")
+mesh_file_path = "res://assets/3D_models/fish/BrownFish.glb"
+mesh_scale = 0.4
+length = 1.5
+radius = 0.2
+speed = 1.0
+stops_per_swim_zone = 2
+lure_probability = 0.005
+qte_lenght = 3.0
+qte_max_distance = 4.0
+word_lengths = Array[int]([6, 5, 5])
+struggle_time = 1.5
+escape_time = 3.0
+inventory_info = ExtResource("1_jlqfx")
+metadata/_custom_type_script = "uid://bhtuqtm6u8b5i"

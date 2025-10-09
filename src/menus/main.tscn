@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://buorhew5urppp"]
+
+[ext_resource type="PackedScene" uid="uid://d0oi0bv0p6f24" path="res://src/menus/title_screen.tscn" id="1_ldmcc"]
+[ext_resource type="PackedScene" uid="uid://wcnnpq5rqmuj" path="res://src/menus/start_server_screen.tscn" id="2_k0rt4"]
+[ext_resource type="PackedScene" uid="uid://inpqu842emau" path="res://src/menus/join_server_screen.tscn" id="3_bru0w"]
+
+[node name="Main" type="Node3D"]
+
+[node name="TitleScreen" parent="." instance=ExtResource("1_ldmcc")]
+
+[node name="StartServerScreen" parent="." instance=ExtResource("2_k0rt4")]
+
+[node name="JoinServerScreen" parent="." instance=ExtResource("3_bru0w")]

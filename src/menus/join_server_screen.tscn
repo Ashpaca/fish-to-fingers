@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://inpqu842emau"]
+
+[ext_resource type="Script" uid="uid://c1bcjhn184tyb" path="res://src/menus/join_server_screen.gd" id="1_bl88y"]
+[ext_resource type="Texture2D" uid="uid://ddsg4ko4vntj7" path="res://assets/sprites/menus/backgrounds/menu_background_1.png" id="2_e8713"]
+[ext_resource type="Texture2D" uid="uid://t1pb0sf0q0gr" path="res://assets/sprites/menus/backgrounds/menu_background_2.png" id="3_i2mnp"]
+[ext_resource type="Texture2D" uid="uid://y2dyksmg2esd" path="res://assets/sprites/menus/backgrounds/menu_background_3.png" id="4_7hgkf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3tlli"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e8713")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i2mnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7hgkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i2mnp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_bru0w"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j727l"]
+gradient = SubResource("Gradient_bru0w")
+width = 640
+height = 480
+
+[node name="JoinServerScreen" type="CanvasLayer"]
+script = ExtResource("1_bl88y")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Background" type="AnimatedSprite2D" parent="Visuals"]
+position = Vector2(320, 240)
+sprite_frames = SubResource("SpriteFrames_3tlli")
+autoplay = "default"
+
+[node name="BackgroundFilter" type="Sprite2D" parent="Visuals"]
+modulate = Color(1, 1, 1, 0.34902)
+position = Vector2(320, 240)
+texture = SubResource("GradientTexture2D_j727l")
+
+[node name="Labels" type="Node2D" parent="."]
+
+[node name="PortNumberLabel" type="RichTextLabel" parent="Labels"]
+offset_left = 45.0
+offset_top = 60.0
+offset_right = 144.0
+offset_bottom = 83.0
+bbcode_enabled = true
+text = "[outline_size=2][outline_color=\"black\"]Port #"
+
+[node name="HostIPv6Label" type="RichTextLabel" parent="Labels"]
+offset_left = 226.0
+offset_top = 60.0
+offset_right = 452.0
+offset_bottom = 83.0
+bbcode_enabled = true
+text = "[outline_size=2][outline_color=\"black\"]Host's IPv6 Address"
+
+[node name="TextEntry" type="Node2D" parent="."]
+
+[node name="PortNumberEntry" type="TextEdit" parent="TextEntry"]
+offset_left = 33.0
+offset_top = 92.0
+offset_right = 157.0
+offset_bottom = 128.0
+text = "60000"
+placeholder_text = "e.g. 60000"
+
+[node name="IPv6Entry" type="TextEdit" parent="TextEntry"]
+offset_left = 208.0
+offset_top = 92.0
+offset_right = 515.0
+offset_bottom = 128.0
+text = "localhost"
+placeholder_text = "Enter Their Temporary IPv6 Address"
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="StartConnectingButton" type="Button" parent="Buttons"]
+offset_left = 33.0
+offset_top = 182.0
+offset_right = 168.0
+offset_bottom = 213.0
+toggle_mode = true
+text = "Start connecting"
+
+[node name="CancelButton" type="Button" parent="Buttons"]
+offset_left = 33.0
+offset_top = 401.0
+offset_right = 90.0
+offset_bottom = 432.0
+text = "cancel"
+
+[node name="ConnectionTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="pressed" from="Buttons/StartConnectingButton" to="." method="_on_start_connecting_button_pressed"]
+[connection signal="pressed" from="Buttons/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="timeout" from="ConnectionTimer" to="." method="_on_connection_timer_timeout"]

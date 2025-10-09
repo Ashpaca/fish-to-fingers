@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmsq0w13q4vv0"]
+
+[ext_resource type="PackedScene" uid="uid://blprxkn413cjn" path="res://src/ui/rich_label_3d.tscn" id="1_qkmvv"]
+[ext_resource type="Script" uid="uid://d3ddhvnfo2ls8" path="res://src/level_stuff/action_node.gd" id="1_wymeg"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wymeg"]
+viewport_path = NodePath("SubViewport")
+
+[node name="ActionNode" type="Node3D"]
+script = ExtResource("1_wymeg")
+
+[node name="TextBox" parent="." instance=ExtResource("1_qkmvv")]
+texture = SubResource("ViewportTexture_wymeg")
+label_width = 800

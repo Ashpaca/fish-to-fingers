@@ -1,0 +1,151 @@
+[gd_scene load_steps=11 format=3 uid="uid://0k0i35tt4iov"]
+
+[ext_resource type="Script" uid="uid://ush1t1ps1mky" path="res://src/ui/scavenge_ui.gd" id="1_p4g1d"]
+[ext_resource type="Texture2D" uid="uid://ddsg4ko4vntj7" path="res://assets/sprites/menus/backgrounds/menu_background_1.png" id="2_c8i41"]
+[ext_resource type="PackedScene" uid="uid://dw41mbxn3p1g3" path="res://src/ui/scavenge_letter_tile.tscn" id="3_4515c"]
+[ext_resource type="Texture2D" uid="uid://t1pb0sf0q0gr" path="res://assets/sprites/menus/backgrounds/menu_background_2.png" id="3_gpevj"]
+[ext_resource type="Texture2D" uid="uid://y2dyksmg2esd" path="res://assets/sprites/menus/backgrounds/menu_background_3.png" id="4_74e7o"]
+[ext_resource type="Texture2D" uid="uid://ddck2wci1f2uw" path="res://assets/sprites/menus/icons/cat_icon.png" id="5_lnpgh"]
+[ext_resource type="Texture2D" uid="uid://d4h7anm1c6bbg" path="res://assets/sprites/menus/icons/fish_icon.png" id="6_cwfyj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rjo2i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c8i41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gpevj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_74e7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gpevj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_33hcu"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c8i41"]
+gradient = SubResource("Gradient_33hcu")
+width = 640
+height = 480
+
+[node name="ScavengeUi" type="Node2D"]
+script = ExtResource("1_p4g1d")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Background" type="AnimatedSprite2D" parent="Visuals"]
+position = Vector2(320, 240)
+sprite_frames = SubResource("SpriteFrames_rjo2i")
+autoplay = "default"
+
+[node name="BackgroundFilter" type="Sprite2D" parent="Visuals"]
+modulate = Color(1, 1, 1, 0.34902)
+position = Vector2(320, 240)
+texture = SubResource("GradientTexture2D_c8i41")
+
+[node name="CatIcon" type="Sprite2D" parent="Visuals"]
+position = Vector2(95, 402)
+texture = ExtResource("5_lnpgh")
+
+[node name="FishIcon" type="Sprite2D" parent="Visuals"]
+position = Vector2(541, 164)
+texture = ExtResource("6_cwfyj")
+
+[node name="WordZone" type="Node2D" parent="."]
+
+[node name="ScavengeLetterTile" parent="WordZone" instance=ExtResource("3_4515c")]
+position = Vector2(126, 90)
+
+[node name="ScavengeLetterTile2" parent="WordZone" instance=ExtResource("3_4515c")]
+position = Vector2(178, 90)
+
+[node name="ScavengeLetterTile3" parent="WordZone" instance=ExtResource("3_4515c")]
+position = Vector2(230, 90)
+
+[node name="ScavengeLetterTile4" parent="WordZone" instance=ExtResource("3_4515c")]
+position = Vector2(282, 90)
+
+[node name="ScavengeLetterTile5" parent="WordZone" instance=ExtResource("3_4515c")]
+position = Vector2(334, 90)
+
+[node name="ScavengeLetterTile6" parent="WordZone" instance=ExtResource("3_4515c")]
+position = Vector2(386, 90)
+
+[node name="ScavengeLetterTile7" parent="WordZone" instance=ExtResource("3_4515c")]
+position = Vector2(438, 90)
+
+[node name="ScavengeLetterTile8" parent="WordZone" instance=ExtResource("3_4515c")]
+position = Vector2(490, 90)
+
+[node name="LetterZone" type="Node2D" parent="."]
+
+[node name="ScavengeLetterTile" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(178, 194)
+
+[node name="ScavengeLetterTile2" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(230, 194)
+
+[node name="ScavengeLetterTile3" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(282, 194)
+
+[node name="ScavengeLetterTile4" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(334, 194)
+
+[node name="ScavengeLetterTile5" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(178, 246)
+
+[node name="ScavengeLetterTile6" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(230, 246)
+
+[node name="ScavengeLetterTile7" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(282, 246)
+
+[node name="ScavengeLetterTile8" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(334, 246)
+
+[node name="ScavengeLetterTile9" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(178, 298)
+
+[node name="ScavengeLetterTile10" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(230, 298)
+
+[node name="ScavengeLetterTile11" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(282, 298)
+
+[node name="ScavengeLetterTile12" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(334, 298)
+
+[node name="ScavengeLetterTile13" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(178, 350)
+
+[node name="ScavengeLetterTile14" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(230, 350)
+
+[node name="ScavengeLetterTile15" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(282, 350)
+
+[node name="ScavengeLetterTile16" parent="LetterZone" instance=ExtResource("3_4515c")]
+position = Vector2(334, 350)
+
+[node name="SaveZone" type="Node2D" parent="."]
+
+[node name="ScavengeLetterTile" parent="SaveZone" instance=ExtResource("3_4515c")]
+position = Vector2(438, 246)
+
+[node name="ScavengeLetterTile2" parent="SaveZone" instance=ExtResource("3_4515c")]
+position = Vector2(490, 246)
+
+[node name="ScavengeLetterTile3" parent="SaveZone" instance=ExtResource("3_4515c")]
+position = Vector2(438, 298)
+
+[node name="ScavengeLetterTile4" parent="SaveZone" instance=ExtResource("3_4515c")]
+position = Vector2(490, 298)

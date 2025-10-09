@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://n1p0anphc7pv"]
+
+[ext_resource type="Script" uid="uid://bqj8oimm7v6sq" path="res://src/player/player.gd" id="1_rxibo"]
+[ext_resource type="PackedScene" uid="uid://ta76o2dimcjx" path="res://assets/3D_models/cat/Cat.glb" id="2_mf2ua"]
+[ext_resource type="Script" uid="uid://0c5nxtllju7g" path="res://src/player/fishing_rod.gd" id="3_244u8"]
+[ext_resource type="PackedScene" uid="uid://cq6k58chh8s4t" path="res://assets/3D_models/fishing_rod/_Fishing Rod_ (https___skfb.ly_6ZGDQ) by Cxrly97 is licensed under Creative Commons Attribution (http___creativecommons.org_licenses_by_4.0_).glb" id="4_5f2sf"]
+[ext_resource type="PackedScene" uid="uid://blprxkn413cjn" path="res://src/ui/rich_label_3d.tscn" id="5_5f2sf"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jiejy"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bwx7t"]
+height = 1.5
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_1mov4"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:my_current_text")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("Cat:rotation")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:my_current_animation")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath(".:my_animation_is_playing")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+
+[node name="Player" type="CharacterBody3D"]
+floor_max_angle = 1.0472
+script = ExtResource("1_rxibo")
+
+[node name="NavAgent" type="NavigationAgent3D" parent="."]
+path_desired_distance = 2.0
+path_postprocessing = 1
+
+[node name="Cat" parent="." instance=ExtResource("2_mf2ua")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0, 0, 0)
+
+[node name="FishingRod" type="Node3D" parent="Cat"]
+script = ExtResource("3_244u8")
+
+[node name="_Fishing Rod_ (https___skfb_ly_6ZGDQ) by Cxrly97 is licensed under Creative Commons Attribution (http___creativecommons_org_licenses_by_4_0_)" parent="Cat/FishingRod" instance=ExtResource("4_5f2sf")]
+transform = Transform3D(-0.157605, -0.95862, -2.30352, 0.18884, 2.29691, -0.968789, 2.48787, -0.235073, -0.0723912, -2.896, 5.671, 5.745)
+
+[node name="FishingLineStartingPoint" type="Node3D" parent="Cat/FishingRod"]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -5.21331, 10.9838, 8.4965)
+
+[node name="JoinCatchVisual" parent="Cat/FishingRod/FishingLineStartingPoint" instance=ExtResource("5_5f2sf")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+visible = false
+texture = SubResource("ViewportTexture_jiejy")
+text = "[Enter]"
+
+[node name="FishingLine" type="Node3D" parent="Cat/FishingRod"]
+
+[node name="FishingLineMesh" type="MeshInstance3D" parent="Cat/FishingRod/FishingLine"]
+transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 0, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_bwx7t")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_1mov4")

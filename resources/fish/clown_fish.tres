@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dan27uh5yiksf"]
+
+[ext_resource type="Resource" uid="uid://c60mocd5a5qx3" path="res://resources/inventory/clown_fish_item.tres" id="1_imb4u"]
+[ext_resource type="Script" uid="uid://bhtuqtm6u8b5i" path="res://resources/fish/fish_data.gd" id="1_tjtwi"]
+
+[resource]
+script = ExtResource("1_tjtwi")
+mesh_file_path = "res://assets/3D_models/fish/ClownFish.glb"
+mesh_scale = 0.2
+length = 0.75
+radius = 0.2
+speed = 0.8
+stops_per_swim_zone = 3
+lure_probability = 0.005
+qte_lenght = 2.0
+qte_max_distance = 8.0
+word_lengths = Array[int]([4, 4, 4, 5])
+struggle_time = 1.0
+escape_time = 2.0
+inventory_info = ExtResource("1_imb4u")
+metadata/_custom_type_script = "uid://bhtuqtm6u8b5i"

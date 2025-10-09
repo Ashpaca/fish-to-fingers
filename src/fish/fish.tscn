@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://40ivq5jdkal3"]
+
+[ext_resource type="Script" uid="uid://d1muc4gcq7rtt" path="res://src/fish/fish.gd" id="1_50vmv"]
+[ext_resource type="Resource" uid="uid://boygk1ta2m3cq" path="res://resources/fish/brown_fish.tres" id="2_50vmv"]
+[ext_resource type="PackedScene" uid="uid://blprxkn413cjn" path="res://src/ui/rich_label_3d.tscn" id="3_qef01"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nsxju"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qef01"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_eudhu"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:catchable")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:removed")
+properties/2/spawn = true
+properties/2/replication_mode = 2
+properties/3/path = NodePath(".:is_lured")
+properties/3/spawn = true
+properties/3/replication_mode = 2
+properties/4/path = NodePath(".:client_luring_me")
+properties/4/spawn = true
+properties/4/replication_mode = 2
+properties/5/path = NodePath("ReelingTextBox:text")
+properties/5/spawn = true
+properties/5/replication_mode = 2
+properties/6/path = NodePath(".:rotation:y")
+properties/6/spawn = true
+properties/6/replication_mode = 1
+
+[node name="Fish" type="CharacterBody3D"]
+script = ExtResource("1_50vmv")
+fish_type = ExtResource("2_50vmv")
+
+[node name="NavAgent" type="NavigationAgent3D" parent="."]
+navigation_layers = 2
+
+[node name="Hitbox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.07, 0)
+
+[node name="QteBox" parent="." instance=ExtResource("3_qef01")]
+visible = false
+texture = SubResource("ViewportTexture_nsxju")
+
+[node name="ReelingTextBox" parent="." instance=ExtResource("3_qef01")]
+visible = false
+texture = SubResource("ViewportTexture_qef01")
+label_height = 300
+font_size = 32
+outline_size = 16
+text = "bigword\\lil\\because\\mountain\\reef"
+
+[node name="LineAttachPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0425408, -0.60108)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_eudhu")

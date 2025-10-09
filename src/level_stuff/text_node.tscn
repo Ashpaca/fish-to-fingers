@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c73tq15d03nnc"]
+
+[ext_resource type="Script" uid="uid://c2knwevkg5tpa" path="res://src/level_stuff/text_node.gd" id="1_bk8eh"]
+[ext_resource type="PackedScene" uid="uid://blprxkn413cjn" path="res://src/ui/rich_label_3d.tscn" id="1_mr2lx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_bk8eh"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_bk8eh"]
+properties/0/path = NodePath("TextBox:text")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="TextNode" type="Node3D"]
+script = ExtResource("1_bk8eh")
+
+[node name="TextBox" parent="." instance=ExtResource("1_mr2lx")]
+texture = SubResource("ViewportTexture_bk8eh")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_bk8eh")

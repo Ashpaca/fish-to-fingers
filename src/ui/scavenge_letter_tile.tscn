@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw41mbxn3p1g3"]
+
+[ext_resource type="Texture2D" uid="uid://c4hfxwoib7iom" path="res://assets/sprites/Scavenge/scavenge_slot.png" id="1_0yf13"]
+[ext_resource type="Script" uid="uid://bkf335s0dq0ro" path="res://src/ui/scavenge_letter_tile.gd" id="2_lano5"]
+
+[node name="ScavengeLetterTile" type="Sprite2D"]
+texture = ExtResource("1_0yf13")
+script = ExtResource("2_lano5")
+
+[node name="LetterBox" type="RichTextLabel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -26.0
+offset_right = -26.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=30]K[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1

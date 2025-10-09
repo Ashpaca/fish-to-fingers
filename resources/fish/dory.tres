@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://itsnavpk25bs"]
+
+[ext_resource type="Resource" uid="uid://ecb5le681j4e" path="res://resources/inventory/dory_item.tres" id="1_0k7y7"]
+[ext_resource type="Script" uid="uid://bhtuqtm6u8b5i" path="res://resources/fish/fish_data.gd" id="1_malux"]
+
+[resource]
+script = ExtResource("1_malux")
+mesh_file_path = "res://assets/3D_models/fish/Dory.glb"
+mesh_scale = 0.2
+length = 0.6
+radius = 0.15
+speed = 1.5
+stops_per_swim_zone = 4
+lure_probability = 0.005
+qte_lenght = 3.0
+qte_max_distance = 10.0
+word_lengths = Array[int]([6, 7])
+struggle_time = 1.0
+escape_time = 3.0
+inventory_info = ExtResource("1_0k7y7")
+metadata/_custom_type_script = "uid://bhtuqtm6u8b5i"

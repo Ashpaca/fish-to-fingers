@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://c60mocd5a5qx3"]
+
+[ext_resource type="Script" uid="uid://whiv2fvy45nr" path="res://resources/inventory/inventory_item.gd" id="1_fkp4y"]
+
+[resource]
+script = ExtResource("1_fkp4y")
+thumbnail_filepath = "res://assets/sprites/inventory/fish/Clownfish.png"
+item_name = "clown"
+category = "fish"
+metadata/_custom_type_script = "uid://whiv2fvy45nr"

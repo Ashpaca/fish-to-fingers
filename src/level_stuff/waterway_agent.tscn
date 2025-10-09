@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm3x06dk2dakt"]
+
+[ext_resource type="MeshLibrary" uid="uid://cg56s3nsomel" path="res://src/mesh_library/ground_mesh_library.meshlib" id="1_ptlrj"]
+[ext_resource type="Script" uid="uid://x2h40cm4xur4" path="res://src/level_stuff/waterway_agent.gd" id="1_vh7ll"]
+
+[node name="WaterwayAgent" type="Node3D"]
+script = ExtResource("1_vh7ll")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_layers = 2
+
+[node name="GridMap" type="GridMap" parent="NavigationRegion3D"]
+mesh_library = ExtResource("1_ptlrj")
+cell_size = Vector3(1, 1, 1)
+collision_layer = 2
+collision_mask = 2
+
+[node name="SpawnPoint" type="Node3D" parent="."]
+
+[node name="DespawnPoint" type="Node3D" parent="."]
+
+[node name="SwimZones" type="Node3D" parent="."]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://40ivq5jdkal3", "uid://wxo6lhsh3kqv")
+spawn_path = NodePath("..")

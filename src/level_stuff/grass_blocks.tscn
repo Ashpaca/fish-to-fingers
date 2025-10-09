@@ -1,0 +1,159 @@
+[gd_scene load_steps=14 format=3 uid="uid://bwgo0gaqvuwgy"]
+
+[ext_resource type="PackedScene" uid="uid://losrrgf618fc" path="res://assets/3D_models/level/ground_tiles/grass blocks.glb" id="1_xkx8n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xkx8n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ngur"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_36scc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_23uwn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a6dpm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cvjam"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_huvkv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2nfl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sq32p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rqkwh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eip77"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v2jsv"]
+
+[node name="grass blocks" instance=ExtResource("1_xkx8n")]
+
+[node name="Cube_0" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_0" parent="Cube_0" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_0/Cube_0" index="0"]
+shape = SubResource("BoxShape3D_xkx8n")
+
+[node name="Cube_1" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_1" parent="Cube_1" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_1/Cube_1" index="0"]
+shape = SubResource("BoxShape3D_8ngur")
+
+[node name="Cube_2" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_2" parent="Cube_2" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_2/Cube_2" index="0"]
+shape = SubResource("BoxShape3D_36scc")
+
+[node name="Cube_3" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_3" parent="Cube_3" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_3/Cube_3" index="0"]
+shape = SubResource("BoxShape3D_23uwn")
+
+[node name="Cube_4" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_4" parent="Cube_4" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_4/Cube_4" index="0"]
+shape = SubResource("BoxShape3D_a6dpm")
+
+[node name="Cube_5" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_5" parent="Cube_5" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_5/Cube_5" index="0"]
+shape = SubResource("BoxShape3D_cvjam")
+
+[node name="Cube_6" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_6" parent="Cube_6" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_6/Cube_6" index="0"]
+shape = SubResource("BoxShape3D_huvkv")
+
+[node name="Cube_7" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_7" parent="Cube_7" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_7/Cube_7" index="0"]
+shape = SubResource("BoxShape3D_j2nfl")
+
+[node name="Cube_8" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_8" parent="Cube_8" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_8/Cube_8" index="0"]
+shape = SubResource("BoxShape3D_sq32p")
+
+[node name="Cube_9" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_9" parent="Cube_9" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_9/Cube_9" index="0"]
+shape = SubResource("BoxShape3D_rqkwh")
+
+[node name="Cube_10" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_10" parent="Cube_10" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_10/Cube_10" index="0"]
+shape = SubResource("BoxShape3D_eip77")
+
+[node name="Cube_11" parent="." index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_11" parent="Cube_11" index="0"]
+collision_layer = 129
+collision_mask = 129
+
+[node name="CollisionShape3D" parent="Cube_11/Cube_11" index="0"]
+shape = SubResource("BoxShape3D_v2jsv")
+
+[node name="Cube_12" parent="." index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="Cube_13" parent="." index="13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cube_13" parent="Cube_13" index="0"]
+collision_layer = 129
+collision_mask = 129

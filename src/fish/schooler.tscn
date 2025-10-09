@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://wxo6lhsh3kqv"]
+
+[ext_resource type="Script" uid="uid://ckyy3vak0olwh" path="res://src/fish/schooler.gd" id="1_rykwp"]
+[ext_resource type="PackedScene" uid="uid://blprxkn413cjn" path="res://src/ui/rich_label_3d.tscn" id="2_t7w5h"]
+[ext_resource type="Resource" uid="uid://boygk1ta2m3cq" path="res://resources/fish/brown_fish.tres" id="2_xknlf"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xknlf"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_xknlf"]
+properties/0/path = NodePath("..:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("..:rotation:y")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("../WordBox:text")
+properties/2/spawn = true
+properties/2/replication_mode = 2
+properties/3/path = NodePath("..:removed")
+properties/3/spawn = true
+properties/3/replication_mode = 2
+
+[node name="Schooler" type="CharacterBody3D"]
+script = ExtResource("1_rykwp")
+fish_type = ExtResource("2_xknlf")
+
+[node name="NavAgent" type="NavigationAgent3D" parent="."]
+navigation_layers = 2
+
+[node name="Hitbox" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.07, 0)
+
+[node name="WordBox" parent="." instance=ExtResource("2_t7w5h")]
+texture = SubResource("ViewportTexture_xknlf")
+text = "this is a test"
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+root_path = NodePath("../NavAgent")
+replication_config = SubResource("SceneReplicationConfig_xknlf")
