@@ -56,7 +56,7 @@ func reset_game() -> void:
 	reachable_text_nodes = []
 	player_list = []
 	tutorial_complete = false
-	tutorial_complete = false
+	tutorial_failed = false
 
 
 func add_item_to_inventory(item : InventoryItem) -> void:
