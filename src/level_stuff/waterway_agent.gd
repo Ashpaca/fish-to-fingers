@@ -19,7 +19,7 @@ var spawn_timer : float = 0.0
 var spawn_delay : float = 3.0
 var swarm_spawn_delay : float = 0.8
 
-func spawn_regualr_fish(delta : float) -> void:
+func spawn_regular_fish(delta : float) -> void:
 	spawn_timer += delta
 	if spawn_timer > spawn_delay:
 		spawn_timer = 0.0
@@ -105,7 +105,7 @@ func _physics_process(delta: float) -> void:
 	if not GameState.is_playing(): return
 	if not multiplayer.is_server(): return
 	if do_spawn_regualr_fish:
-		spawn_regualr_fish(delta)
+		spawn_regular_fish(delta)
 	if do_spawn_schooler_fish:
 		spawn_schooler_fish(delta)
 	
