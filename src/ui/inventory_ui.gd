@@ -8,10 +8,10 @@ var slot_backgrounds : Array[Sprite2D]
 var slot_items : Array[Sprite2D]
 var selected_position : int = 0
 
-func set_selected_position(position : int) -> void:
-	GameState.inventory_slot_selected = position
+func set_selected_position(ui_position : int) -> void:
+	GameState.inventory_slot_selected = ui_position
 	for i in range(slot_backgrounds.size()):
-		if i == position:
+		if i == ui_position:
 			slot_backgrounds[i].texture = selected_background_sprite
 		else:
 			slot_backgrounds[i].texture = unselected_background_sprite
@@ -24,7 +24,7 @@ func update_inventory_items() -> void:
 			slot_items[i].texture = null
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if GameState.is_using_typing_agent():
 		visible = true
 	else:

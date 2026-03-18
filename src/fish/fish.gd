@@ -76,7 +76,7 @@ func set_fish():
 		call_deferred("rpc", "sync_fish", var_to_str(fish_type), qte_letter)
 
 
-@rpc("call_remote")
+@rpc("authority", "call_remote")
 func sync_fish(type : String, used_letter : String) -> void:
 	fish_type = str_to_var(type)
 	qte_letter = used_letter
