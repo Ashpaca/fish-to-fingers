@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://ddkmx8vqbnggl"]
+[gd_scene load_steps=46 format=3 uid="uid://ddkmx8vqbnggl"]
 
 [ext_resource type="Script" uid="uid://dmv07kwjp6gb0" path="res://src/level_stuff/game.gd" id="1_xhipi"]
 [ext_resource type="Script" uid="uid://cvqxs1tntf8wp" path="res://src/level_stuff/main_camera.gd" id="2_mgj0h"]
@@ -136,6 +136,9 @@ signal_to_call = "tutorial_failed"
 signal_arguments = Array[String]([])
 additional_conditions = "GameState.current_text == \"this\""
 metadata/_custom_type_script = "uid://ywhdg78od6h2"
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_r1gd2"]
+size = Vector2(2000, 600)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l8svx"]
 render_priority = 0
@@ -394,6 +397,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.193)
 node_type = SubResource("Resource_tdgqi")
 
 [node name="Walls" type="Node3D" parent="Level"]
+
+[node name="TestWall" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.96207, -13.0115)
+double_sided = false
+texture = SubResource("PlaceholderTexture2D_r1gd2")
+
+[node name="TestWall2" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.96207, -14.5486)
+double_sided = false
+texture = SubResource("PlaceholderTexture2D_r1gd2")
 
 [node name="TypingAgent" parent="." instance=ExtResource("4_ot7gk")]
 
