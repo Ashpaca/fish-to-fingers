@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjq6abks5ikr0"]
+
+[ext_resource type="PackedScene" uid="uid://bb7y53u7ekvt6" path="res://assets/3D_models/plants/Log Scene (httpsskfb.ly6QYrr) by HBradnam is licensed under Creative Commons Attribution (httpcreativecommons.orglicensesby4.0).glb" id="1_y62wf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cxfwe"]
+size = Vector3(4.00443, 1, 1.76001)
+
+[node name="FallenLog" instance=ExtResource("1_y62wf")]
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_cxfwe")
