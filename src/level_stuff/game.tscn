@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://csdki654htuwl" path="res://src/Decorations/grass_foliage.tscn" id="17_tdgqi"]
 [ext_resource type="Texture2D" uid="uid://c4hfxwoib7iom" path="res://assets/sprites/Scavenge/scavenge_slot.png" id="19_3nime"]
 [ext_resource type="Script" uid="uid://cqeywnx6tfo8w" path="res://src/ui/inventory_ui.gd" id="19_brw3o"]
+[ext_resource type="PackedScene" uid="uid://lubp7s530gaf" path="res://src/level_stuff/tree_wall.tscn" id="20_ava72"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3aisa"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -136,9 +137,6 @@ signal_to_call = "tutorial_failed"
 signal_arguments = Array[String]([])
 additional_conditions = "GameState.current_text == \"this\""
 metadata/_custom_type_script = "uid://ywhdg78od6h2"
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_r1gd2"]
-size = Vector2(2000, 600)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l8svx"]
 render_priority = 0
@@ -398,15 +396,419 @@ node_type = SubResource("Resource_tdgqi")
 
 [node name="Walls" type="Node3D" parent="Level"]
 
-[node name="TestWall" type="Sprite3D" parent="Level/Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.96207, -13.0115)
-double_sided = false
-texture = SubResource("PlaceholderTexture2D_r1gd2")
+[node name="TreeWall" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -19.5, 2, 5)
 
-[node name="TestWall2" type="Sprite3D" parent="Level/Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.96207, -14.5486)
-double_sided = false
-texture = SubResource("PlaceholderTexture2D_r1gd2")
+[node name="TreeWall2" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -18.5, 2, 5)
+
+[node name="TreeWall3" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -17.5, 2, 5)
+
+[node name="TreeWall4" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -16.5, 2, 5)
+
+[node name="TreeWall5" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -15.5, 2, 5)
+
+[node name="TreeWall6" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -14.5, 2, 5)
+
+[node name="TreeWall7" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -13.5, 2, 5)
+
+[node name="TreeWall8" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -12.5, 2, 5)
+
+[node name="TreeWall9" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -11.5, 2, 4)
+
+[node name="TreeWall10" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -10.5, 2, 3)
+
+[node name="TreeWall11" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -11.5, 2, -9)
+
+[node name="TreeWall12" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -10.5, 2, -10)
+
+[node name="TreeWall13" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -9.5, 2, -13)
+
+[node name="TreeWall14" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -8.5, 2, -13)
+
+[node name="TreeWall15" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -7.5, 2, -13)
+
+[node name="TreeWall16" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -6.5, 2, -13)
+
+[node name="TreeWall17" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -5.5, 2, -13)
+
+[node name="TreeWall18" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -4.5, 2, -13)
+
+[node name="TreeWall19" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -3.5, 2, -13)
+
+[node name="TreeWall20" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -2.5, 2, -13)
+
+[node name="TreeWall21" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -1.5, 2, -13)
+
+[node name="TreeWall22" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -0.5, 2, -13)
+
+[node name="TreeWall23" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 0.5, 2, -13)
+
+[node name="TreeWall24" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 1.5, 2, -13)
+
+[node name="TreeWall25" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 2.5, 2, -13)
+
+[node name="TreeWall26" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 3.5, 2, -13)
+
+[node name="TreeWall27" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 4.5, 2, -13)
+
+[node name="TreeWall28" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 5.5, 2, -13)
+
+[node name="TreeWall29" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 6.5, 2, -13)
+
+[node name="TreeWall30" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 7.5, 2, -13)
+
+[node name="TreeWall31" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 8.5, 2, -13)
+
+[node name="TreeWall32" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 9.5, 2, -13)
+
+[node name="TreeWall33" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 10.5, 2, -13)
+
+[node name="TreeWall34" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -2.5, 2, 16)
+
+[node name="TreeWall35" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -22.5, 2, 7)
+
+[node name="TreeWall36" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -21.5, 2, 5)
+
+[node name="TreeWall37" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, -20.5, 2, 5)
+
+[node name="TreeWall38" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -12, 2, 4.5)
+
+[node name="TreeWall39" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -11, 2, 3.5)
+
+[node name="TreeWall40" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -10, 2, 2.5)
+
+[node name="TreeWall41" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -10, 2, 1.5)
+
+[node name="TreeWall42" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -10, 2, 0.5)
+
+[node name="TreeWall43" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -10, 2, -0.5)
+
+[node name="TreeWall44" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -11, 2, -1.5)
+
+[node name="TreeWall45" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -11, 2, -2.5)
+
+[node name="TreeWall46" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -11, 2, -3.5)
+
+[node name="TreeWall47" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -12, 2, -4.5)
+
+[node name="TreeWall48" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -12, 2, -5.5)
+
+[node name="TreeWall49" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -12, 2, -6.5)
+
+[node name="TreeWall50" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -12, 2, -7.5)
+
+[node name="TreeWall51" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -12, 2, -8.5)
+
+[node name="TreeWall52" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -11, 2, -9.5)
+
+[node name="TreeWall53" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -10, 2, -10.5)
+
+[node name="TreeWall54" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -10, 2, -11.5)
+
+[node name="TreeWall55" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -10, 2, -12.5)
+
+[node name="TreeWall56" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -21, 2, 22.5)
+
+[node name="TreeWall57" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -21, 2, 21.5)
+
+[node name="TreeWall58" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -22, 2, 20.5)
+
+[node name="TreeWall59" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 19.5)
+
+[node name="TreeWall60" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 18.5)
+
+[node name="TreeWall61" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 17.5)
+
+[node name="TreeWall62" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 16.5)
+
+[node name="TreeWall63" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 15.5)
+
+[node name="TreeWall64" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 14.5)
+
+[node name="TreeWall65" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 13.5)
+
+[node name="TreeWall66" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 12.5)
+
+[node name="TreeWall67" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 11.5)
+
+[node name="TreeWall68" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 10.5)
+
+[node name="TreeWall69" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 9.5)
+
+[node name="TreeWall70" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 8.5)
+
+[node name="TreeWall71" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -23, 2, 7.5)
+
+[node name="TreeWall72" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -22, 2, 6.5)
+
+[node name="TreeWall73" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, -22, 2, 5.5)
+
+[node name="TreeWall74" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -10.5, 2, -1)
+
+[node name="TreeWall75" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -11.5, 2, -4)
+
+[node name="TreeWall76" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, 10.5, 2, 7)
+
+[node name="TreeWall77" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, 9.5, 2, 7)
+
+[node name="TreeWall78" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, 8.5, 2, 8)
+
+[node name="TreeWall79" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -2.5, 2, 13)
+
+[node name="TreeWall80" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -1.5, 2, 13)
+
+[node name="TreeWall81" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -0.5, 2, 13)
+
+[node name="TreeWall82" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, 0.5, 2, 13)
+
+[node name="TreeWall83" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, 1.5, 2, 13)
+
+[node name="TreeWall84" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -2.5, 2, 19)
+
+[node name="TreeWall85" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -3.5, 2, 20)
+
+[node name="TreeWall86" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -4.5, 2, 22)
+
+[node name="TreeWall87" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -5.5, 2, 23)
+
+[node name="TreeWall88" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -6.5, 2, 23)
+
+[node name="TreeWall89" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -7.5, 2, 23)
+
+[node name="TreeWall90" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -8.5, 2, 23)
+
+[node name="TreeWall91" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -9.5, 2, 23)
+
+[node name="TreeWall92" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -10.5, 2, 23)
+
+[node name="TreeWall93" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -11.5, 2, 23)
+
+[node name="TreeWall94" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -12.5, 2, 23)
+
+[node name="TreeWall95" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -13.5, 2, 23)
+
+[node name="TreeWall96" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -14.5, 2, 23)
+
+[node name="TreeWall97" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -15.5, 2, 23)
+
+[node name="TreeWall98" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -16.5, 2, 23)
+
+[node name="TreeWall99" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -17.5, 2, 23)
+
+[node name="TreeWall100" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -18.5, 2, 23)
+
+[node name="TreeWall101" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -19.5, 2, 23)
+
+[node name="TreeWall102" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -20.5, 2, 23)
+
+[node name="TreeWall103" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -21.5, 2, 21)
+
+[node name="TreeWall104" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, -5.46392e-07, 0, 6.25, 0, 5.46392e-07, 0, -6.25, -22.5, 2, 20)
+
+[node name="TreeWall105" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -12.5)
+
+[node name="TreeWall106" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -11.5)
+
+[node name="TreeWall107" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -10.5)
+
+[node name="TreeWall108" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -9.5)
+
+[node name="TreeWall109" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -8.5)
+
+[node name="TreeWall110" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -7.5)
+
+[node name="TreeWall111" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -6.5)
+
+[node name="TreeWall112" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -5.5)
+
+[node name="TreeWall113" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -4.5)
+
+[node name="TreeWall114" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -3.5)
+
+[node name="TreeWall115" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -2.5)
+
+[node name="TreeWall116" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -1.5)
+
+[node name="TreeWall117" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, -0.5)
+
+[node name="TreeWall118" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, 0.5)
+
+[node name="TreeWall119" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, 1.5)
+
+[node name="TreeWall120" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, 2.5)
+
+[node name="TreeWall121" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, 3.5)
+
+[node name="TreeWall122" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, 4.5)
+
+[node name="TreeWall123" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, 5.5)
+
+[node name="TreeWall124" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 11, 2, 6.5)
+
+[node name="TreeWall125" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 7.5)
+
+[node name="TreeWall126" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 8, 2, 8.5)
+
+[node name="TreeWall127" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 8, 2, 9.5)
+
+[node name="TreeWall128" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -3, 2, 12.5)
+
+[node name="TreeWall129" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -3, 2, 13.5)
+
+[node name="TreeWall130" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -3, 2, 14.5)
+
+[node name="TreeWall131" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -3, 2, 15.5)
+
+[node name="TreeWall132" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -2, 2, 16.5)
+
+[node name="TreeWall133" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -2, 2, 17.5)
+
+[node name="TreeWall134" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -2, 2, 18.5)
+
+[node name="TreeWall135" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -3, 2, 19.5)
+
+[node name="TreeWall136" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -4, 2, 20.5)
+
+[node name="TreeWall137" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -4, 2, 21.5)
+
+[node name="TreeWall138" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -5, 2, 22.5)
 
 [node name="TypingAgent" parent="." instance=ExtResource("4_ot7gk")]
 

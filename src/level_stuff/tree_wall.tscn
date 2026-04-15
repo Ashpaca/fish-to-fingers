@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://lubp7s530gaf"]
+
+[ext_resource type="Texture2D" uid="uid://bktj3ywst10ir" path="res://assets/sprites/boarders/boarder_sprite.png" id="1_2safg"]
+
+[node name="TreeWall" type="Sprite3D"]
+transform = Transform3D(6.25, 0, 0, 0, 6.25, 0, 0, 0, 6.25, 0, 0, 0)
+double_sided = false
+texture_filter = 0
+texture = ExtResource("1_2safg")
+
+[node name="Back" type="Sprite3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+flip_h = true
+modulate = Color(1, 1, 1, 0.411765)
+double_sided = false
+texture_filter = 0
+texture = ExtResource("1_2safg")
