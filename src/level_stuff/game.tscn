@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://ddkmx8vqbnggl"]
+[gd_scene load_steps=48 format=3 uid="uid://ddkmx8vqbnggl"]
 
 [ext_resource type="Script" uid="uid://dmv07kwjp6gb0" path="res://src/level_stuff/game.gd" id="1_xhipi"]
 [ext_resource type="Script" uid="uid://cvqxs1tntf8wp" path="res://src/level_stuff/main_camera.gd" id="2_mgj0h"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://c4hfxwoib7iom" path="res://assets/sprites/Scavenge/scavenge_slot.png" id="19_3nime"]
 [ext_resource type="Script" uid="uid://cqeywnx6tfo8w" path="res://src/ui/inventory_ui.gd" id="19_brw3o"]
 [ext_resource type="PackedScene" uid="uid://lubp7s530gaf" path="res://src/level_stuff/tree_wall.tscn" id="20_ava72"]
+[ext_resource type="Texture2D" uid="uid://ds41p62yhhr31" path="res://assets/3D_models/level/ground_tiles/grass blocks_tilesetPlains.png" id="21_ava72"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3aisa"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -137,6 +138,10 @@ signal_to_call = "tutorial_failed"
 signal_arguments = Array[String]([])
 additional_conditions = "GameState.current_text == \"this\""
 metadata/_custom_type_script = "uid://ywhdg78od6h2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xqqm"]
+atlas = ExtResource("21_ava72")
+region = Rect2(30, 30, 2, 2)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l8svx"]
 render_priority = 0
@@ -809,6 +814,250 @@ transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08,
 
 [node name="TreeWall138" parent="Level/Walls" instance=ExtResource("20_ava72")]
 transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, -5, 2, 22.5)
+
+[node name="TreeWall139" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 8.5)
+
+[node name="TreeWall140" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 9.5)
+
+[node name="TreeWall141" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 10.5)
+
+[node name="TreeWall142" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 11.5)
+
+[node name="TreeWall143" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 12.5)
+
+[node name="TreeWall144" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 13.5)
+
+[node name="TreeWall145" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 14.5)
+
+[node name="TreeWall146" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 15.5)
+
+[node name="TreeWall147" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 16.5)
+
+[node name="TreeWall148" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 17.5)
+
+[node name="TreeWall149" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 18.5)
+
+[node name="TreeWall150" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 19.5)
+
+[node name="TreeWall151" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 20.5)
+
+[node name="TreeWall152" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(7.45305e-08, 0, -6.25, 0, 6.25, 0, 6.25, 0, 7.45305e-08, 9, 2, 21.5)
+
+[node name="TreeWall153" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 8.5, 2, 22)
+
+[node name="TreeWall154" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 7.5, 2, 22)
+
+[node name="TreeWall155" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 6.5, 2, 22)
+
+[node name="TreeWall156" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 5.5, 2, 22)
+
+[node name="TreeWall157" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 4.5, 2, 22)
+
+[node name="TreeWall158" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 3.5, 2, 22)
+
+[node name="TreeWall159" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 2.5, 2, 22)
+
+[node name="TreeWall160" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-6.25, 0, 1.98666e-07, 0, 6.25, 0, -1.98666e-07, 0, -6.25, 1.5, 2, 22)
+
+[node name="TreeWall161" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 21.5)
+
+[node name="TreeWall162" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 20.5)
+
+[node name="TreeWall163" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 19.5)
+
+[node name="TreeWall164" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 18.5)
+
+[node name="TreeWall165" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 17.5)
+
+[node name="TreeWall166" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 16.5)
+
+[node name="TreeWall167" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 15.5)
+
+[node name="TreeWall168" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 14.5)
+
+[node name="TreeWall169" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 14.5)
+
+[node name="TreeWall170" parent="Level/Walls" instance=ExtResource("20_ava72")]
+transform = Transform3D(-2.73196e-07, 0, 6.25, 0, 6.25, 0, -6.25, 0, -2.73196e-07, 1, 2, 13.5)
+
+[node name="Sprite3D" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, 21, 0, -3)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, 21, 0, -23)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, 1, 0, -23)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, -19, 0, -23)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, -22, 0, -5)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, -33, 0, 15)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D37" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, -33, 0, 35)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, -13, 0, 33)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, 7, 0, 31)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, 18, 0, 18)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(1000, 0, 0, 0, -4.37114e-05, -1000, 0, 1000, -4.37114e-05, 19, 0, 17)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -2, 0, 13)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -2, 0, 15)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 0, 0, 13)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 1, 0, 13)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 0, 0, 15)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D16" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 1, 0, 15)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D17" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 1, 0, 17)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D18" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -1, 0, 17)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D19" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -1, 0, 19)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D20" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 1, 0, 19)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D21" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 1, 0, 20)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D22" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -1, 0, 20)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D23" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -2, 0, 20)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D24" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -3, 0, 21)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D25" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -4, 0, 23)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D26" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -22, 0, 22)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D27" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -23, 0, 21)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D28" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -23, 0, 6)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D29" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -12, 0, 3)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D30" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -11, 0, 2)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D31" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -11, 0, 0)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D32" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -12, 0, -2)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D33" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -12, 0, -3)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D34" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -12, 0, -10)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D35" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -11, 0, -11)
+texture = SubResource("AtlasTexture_6xqqm")
+
+[node name="Sprite3D36" type="Sprite3D" parent="Level/Walls"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, -10.6956, 0.431835, -12.6473)
+texture = SubResource("AtlasTexture_6xqqm")
 
 [node name="TypingAgent" parent="." instance=ExtResource("4_ot7gk")]
 
