@@ -81,7 +81,7 @@ func _on_start_connecting_button_pressed() -> void:
 	GameState.ipv6_number = their_ip
 	peer = PacketPeerUDP.new()
 	
-	""" <- uncomment here for local testing
+	#""" <- uncomment here for local testing
 	peer.bind(port_num)
 	"""
 	peer.bind(port_num+1)# - different ports for local testing"""

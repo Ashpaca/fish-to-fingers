@@ -83,7 +83,7 @@ func _on_start_connecting_button_pressed() -> void:
 	peer = PacketPeerUDP.new()
 	peer.bind(port_num)
 	
-	""" <- uncomment here for local testing
+	#""" <- uncomment here for local testing
 	peer.set_dest_address(their_ip, port_num)
 	"""
 	peer.set_dest_address(their_ip, port_num+1)# - differnt ports for local testing"""
